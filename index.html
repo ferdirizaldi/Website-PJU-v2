@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta>
+    <title>PT. Pribumi Jaya Utama</title>
+    <link rel="stylesheet" href="./style.css" media="screen">
+    <link rel="stylesheet" href="./SliderStyle.css">
+    <link rel="icon" type="image/png" href="./Assets/PJULogo.png"/>
+    <link href="lightbox.css" rel="stylesheet">
+    <script src="jquery-2.1.3.js"></script>
+    <script src="lightbox.js"></script>
+    <script src="./main.js"></script>
+</head>
+<body>
+    <!--Navigation Bar-->
+    <header>
+        <a href="./index.html" id=logoBox><img src="Assets/PJULOGO_Text.png" class="logo"> </a>
+        <ul>
+            <li><a href="#">Halaman Utama</a></li>
+            <li><a href="./BidangKerja.html#PJU_BidangKerja">Bidang Kerja</a></li>
+            <li><a href="./index.html#PJU_UnitKerja">Unit Kerja</a></li>
+            <li><a href="./index.html#PJU_Kontak">Kontak</a></li>
+            <li><a href="./index.html#PJU_Peta">Peta Lokasi</a></li>
+            <li><a href="./index.html#PJU_TentangKami">Tentang Kami</a></li>
+        </ul>
+    </header>
+    <!--Slider Photos-->
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div  >
+            <img src="./Assets/test1.jpg" style="width:100%">
+            <div class="text"></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img name="test2.JPG" src="./Assets/test2.jpg" style="width:100%">
+            <div class="text"></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="./Assets/test3.jpg" style="width:100%">
+            <div class="text"></div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <br>
+    <script>
+        var slideIndex = 1;
+        var setTime;
+        showSlides();
+    </script>
+    <!--Content Start From Here-->
+    <!--Tentang Kami-->
+    <a class="anchorVer2" id="PJU_TentangKami"></a>
+    <div id="content0">
+        <div class="tentangKami">
+            <h2>Tentang Kami</h2>   
+            <p>Perusahaan Pengelolaan Jasa Tenaga Kerja, Contractor, Supplier di Medan, Indonesia.
+            Perusahaan ini terletak di Jl. Teladan / Hiburan. Perusahaan swasta ini didirikan sejak tahun 2006</p>
+        </div>
+    </div>
+    <!--Unit Aktif-->
+    <a class="anchorVer2" id="PJU_UnitKerja"></a>
+    <div id="content6">
+        <div class="UnitAktif"><a href="./UnitKerja.html">Lihat Unit Kerja Aktif di Sini</a></div>    
+    </div>
+    <!--Visi dan Misi-->
+    <div id="content1">
+        <div class="visi">
+            <h2>Visi</h2>
+            <p>
+                Menjadi perusahaan Kontraktor Swasta Nasional terdepan dalam Pengadaan Jasa Tenaga kerja dibidang Jasa Keamanan, Kebersihan dan Perawatan. Berkembang secara berkesinambungan
+                agar menjadi perusahaan handal yang dapat bersaing, serta sebagai salah satu perusahaan yang memperjuangkan dan memberikan kesejahteraan kepada karyawan, pengurus,  serta stakeholder lainnya melalui komitmen terhadap tata kelola perusahaan yang baik  (good corporate governance).
+            </p>
+        </div>
+        <div class="misi">
+            <h2>Misi</h2>
+        
+                <ol>
+                    <li>Memberikan layanan prima kepada stakeholder sebagai mitra kerja</li>
+                    <li>Meningkatkan kepedulian dan tanggung jawab terhadap lingkungan</li>
+                    <li>Pelatihan dan rekruitmen Sumber Daya Manusia yang tepat, untuk menghasilkan tenaga kerja yang kompeten, berdedikasi dan bersemangat tinggi sesuai budaya perusahaan.</li>
+                    <li>Penerapan prinsip kehati-hatian dalam pengambilan keputusan dan tata kelola perusahaan yang baik (good corporate governance).</li>
+                    <li>Peningkatan kompetisi di era globalisasi lewat kerjasama dengan perusahaan kontraktor nasional maupun internasional.</li>
+                </ol>
+            
+        </div>
+    </div>
+    <!--Hubungi Kami-->
+    <a class="anchor" id="PJU_Kontak"></a>
+    <div id="content2">
+        <div class="Kontak">
+            <h2>Kontak</h2>
+            <p>pribumijayautama.pt@gmail.com</p>
+            <p>+6261 7350195</p>
+            <p>Jalan Teladan/Hiburan No.1</p>
+            <p>Medan, Sumatera Utara </p>
+            <p>Indonesia</p>
+        </div>
+    </div>
+
+    <!--Map-->
+    <a class="anchorVer3" id="PJU_Peta"></a>
+    <div id="content3">
+        <div id="PJU_Map">
+            <h2>Lokasi Kami</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.0976227445285!2d98.6887754145774!3d3.564998897405655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303130448453723d%3A0x5e04ea7fdf4b629d!2sPribumi%20Jaya%20Utama.PT!5e0!3m2!1sja!2sjp!4v1612430288450!5m2!1sja!2sjp" 
+            width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
+    
+
+</body>
+<footer><div class="kalimatFooter">©2021 Pribumi Jaya Utama<br>All Right Reserved.</div></footer>
+</html>

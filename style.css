@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*link Anchoring*/
+a.anchor {
+    display: block;
+    position: relative;
+    top: -200px;
+    visibility: hidden;
+}
+a.anchorVer2 {
+    display: block;
+    position: relative;
+    top: -270px;
+    visibility: hidden;
+}
+a.anchorVer3 {
+    display: block;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
+}
+/*Header*/
+header{
+    box-sizing: border-box;
+    width: 100%;
+    background: rgb(220,17,17);
+    background: linear-gradient(180deg, rgba(220,17,17,1) 70%, rgba(135,15,15,1) 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding:10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+header ul{
+    position: relative;
+    display: flex;
+    
+}
+
+header ul li{
+    list-style: none;
+    animation: slidein 0.5s ease-out;
+}
+
+header ul li a{
+    display: inline-block;
+    color: white;
+    font-weight:400;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 3px;
+}
+header ul li a:hover{
+    
+    background-color: rgb(0,0,0,0.5);
+    color: white;
+}
+.selected{
+    font-weight: bold;
+    border-bottom: 4px solid white;
+}
+@media screen and (max-width:1000px){
+    header ul li a{
+        font-weight:bold;
+    }
+}
+/*keyframes*/
+@keyframes slidein{
+    0%{opacity: 0%;}
+    0%{margin-top: -50px;}
+    100%{opacity: 100%;}
+    100%{margin-top: 0px;}
+}
+@keyframes slidein2{
+    0%{opacity: 0%;}
+    0%{margin-bottom: 50px;}
+    100%{opacity: 100%;}
+    100%{margin-bottom: 0px;}
+}
+/**/
+@media screen and (max-width:1000px){
+    header ul li a{font-size: 0.9em;}
+}
+header .logo{
+    position: relative;
+    max-width: 400px;
+    background-color: transparent;
+}
+#logoBox{
+    margin-left: 50px;
+}
+@media screen and (max-width:1000px){
+    #logoBox{
+        margin-left: 0px;
+    }
+}
+/*Body*/
+body{
+    position: relative;
+    z-index: 1;
+    padding-top: 7%;
+}
+
+@media screen and (max-width:1000px){
+    body{
+        padding-top: 12%;
+    }
+}
+/*Tentang Kami*/
+#content0{
+    position: relative;
+    width: 100%;
+    max-height: 100%px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0px auto 50px;
+}
+#content0::before{
+    content:'';
+    position: absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    background-image: url('Assets/TentangKami.JPG');
+    background-size: cover;
+    background-position:top center;
+    opacity:0.7;
+}
+.tentangKami{
+    position: relative;
+    padding: 10px;
+    margin:0px auto 0px;
+    width:50%;
+    background-color: rgba(255,255,255,0.7);
+}
+.tentangKami h2{
+    text-align: center;
+    position: relative;
+    color:black;
+    font-size: 4em;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+.tentangKami p{
+    text-align: center;
+    position: relative;
+    color: #333;
+    font-size: 1.5em;
+}
+@media screen and (max-width:1000px){
+    .tentangKami h2{
+    text-align: center;
+    position: relative;
+    color:black;
+    font-size: 4em;
+    line-height: 3em;
+    font-weight: 500;
+}
+    .tentangKami p{
+    text-align: center;
+    position: relative;
+    color: #333;
+    font-size: 3em;
+}   
+}
+/*Unit Aktif*/
+#content6{
+    position: relative;
+    width: 50%;
+    max-height: 1800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0,0,0,0.1);
+    margin:0px auto 50px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    overflow: hidden;
+}
+#content6::before{
+    content:'';
+    position: absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    background-image: url('Assets/UnitKerjaAktif.JPG');
+    background-size: cover;
+    background-position:top center;
+    opacity:0.7;
+    animation-name: UnitAktifAnimasiIMG;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes UnitAktifAnimasiIMG {
+    0%   {width: 100%;}
+    0%   {margin-left: 0px;}
+    25%  {width: 103%;}
+    25%  {margin-left: -7px;}
+    50%  {width: 103%;}
+    50%  {margin-left: -7px;}
+    100% {width: 100%;}
+    100% {margin-left: 0px;}
+}
+.UnitAktif{
+    position: relative;
+    padding: 5px;
+    text-align: center;
+    margin:0px auto;
+    background-color: rgba(220,17,17,0.5);
+    animation-name: UnitAktifAnimasi;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.UnitAktif a{
+    position: relative;
+    font-weight: bold;
+    font-size: 2em;
+    color: white;
+}
+
+@keyframes UnitAktifAnimasi {
+    0%   {background-color: rgba(220,17,17,0.9)}
+    25%  {background-color: rgba(0,0,0,0.7)}
+    50%  {background-color: rgba(0,0,0,0.7)}
+    100% {background-color: rgba(220,17,17,0.9)}
+}
+/*Visi Misi*/ 
+#content1{
+    position: relative;
+    width: 100%;
+    max-height: 1800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0,0,0,0.1);
+    margin:0px auto 50px;
+
+}
+.visi{
+    padding: 10px;
+    margin:0px auto 0px;
+    margin-left: 10%;
+    width:50%;
+}
+
+.visi h2{
+    color:black;
+    font-size: 4em;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+.visi p {
+    color: #333;
+    font-size: 1.5em;
+}
+@media screen and (max-width:1000px){
+    .visi{
+        background-color:rgb(0,0,0,0.5);
+        padding:5%;
+    }
+     .visi h2{
+    color:black;
+    font-size: 6em;
+    line-height: 1.4em;
+    font-weight: 500;
+    color:white;
+}
+
+    .visi p {
+    color: #333;
+    font-size: 2em;
+    color:white;
+}
+    
+}
+.misi {
+    padding: 50px;
+    margin: 0px auto 0px;
+    width: 40%;
+    margin-right: 10%;
+}
+.misi h2{
+    color:black;
+    font-size: 4em;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+.misi ol li{
+    color: #333;
+    font-size: 1.06em;
+}
+@media screen and (max-width:1000px){
+    .misi h2{
+    color:black;
+    font-size: 6em;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+    .misi ol li{
+    color: #333;
+    font-size: 1.6em;
+}
+    
+}
+/*Kontak*/
+#content2{
+    position: relative;
+    width: 100%;
+    max-height: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0px auto 30px;
+}
+#content2::before{
+    content:'';
+    position: absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    background-image: url('Assets/Kontak.jpg');
+    background-size: cover;
+    background-position:top center;
+    opacity:0.7;
+}
+.Kontak{
+    position: relative;
+    margin:0px auto 0px;
+    margin-left: 15%;
+    padding: 60px;
+    background-color: rgba(0,0,0,0.7);
+}
+.Kontak h2{
+    position: relative;
+    font-size: 4em;
+    color: white;
+}
+.Kontak p{
+    position: relative;
+    font-size: 1.4em;
+    color: white;
+}
+@media screen and (max-width:1000px){
+    .Kontak h2{
+    position: relative;
+    font-size: 6em;
+    color: white;
+}
+    .Kontak p{
+    position: relative;
+    font-size: 2em;
+    color: white;
+}
+    
+}
+/*Peta Lokasi*/
+#content3{
+    max-height: 700px;
+}
+#PJU_Map {
+    margin: 0px auto;
+    width: 40%;
+}
+#PJU_Map h2{
+    font-size: 2em;
+}
+@media screen and (max-width:1000px){
+    #PJU_Map {
+    margin: 0px auto;
+    width: 100%;
+}
+    #PJU_Map h2{
+    font-size: 3.5em;
+    text-align:center;
+}
+    
+}
+/*Content4 digunakan untuk artikel*/
+/*BidangKerja.html, UnitKerja.html*/
+/*BidangKerja, Unit Kerja*/
+.content4{
+    position: relative;
+    width: 100%;
+    display: block;
+    align-items: center;
+    margin:0px auto 30px;
+}
+
+.content4::before{
+    content:'';
+    position: absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    background-image: url('Assets/BidangKerjabg.jpg');
+    background-size: cover;
+    background-position:top center;
+    opacity:0.7;
+}
+/*Artikel Halaman*/
+.lembarArtikel{
+    position: relative;
+    width: 70%;
+    padding: 30px;
+    margin:0px auto;
+    background-color: whitesmoke;
+}
+.lembarArtikel p{
+    font-size: 1.4em;
+}
+@media screen and (max-width:1000px){
+    .lembarArtikel{
+        width: 100%; 
+    }
+}
+/*Atribut Artikel*/
+h1.judulArtikel{
+    border-bottom:4px solid black ;
+    animation: slidein2 0.5s ease-out;
+}
+
+#content5{
+    position: relative;
+    width: 30%;
+    display: block;
+    align-items: center;
+    margin:0px auto 30px;
+}
+/*Gambar*/
+.Gambar{
+    position: relative;
+    width: 45%;
+    margin: 0px auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+@media screen and (max-width:1000px){
+    .Gambar{
+        width: 100%; 
+    }
+}
+.GambarList{
+    position: relative;
+    width: 100%;
+    display: block;
+    align-items: center;
+    margin-bottom: 2%;
+    margin-right: 2%;
+}
+.GambarList h2{
+    position: relative;
+    padding:10%;
+    color: white;
+    text-align: center;
+}
+.GambarList::before{
+    content:'';
+    position: absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    background-color: rgb(0,0,0,0.7);
+}
+.GambarList h2 a{
+    color: white;
+    text-decoration: none;
+}
+.GambarList h2 a:hover{
+    color: lightcoral;
+    text-decoration: none;
+}
+.Daftar{
+    display: flex;
+    
+}
+/*Footer*/
+a.backlink{
+    position: relative;
+    display: block;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    background-color: whitesmoke;
+    font-weight: bold;
+}
+@media screen and (max-width:1000px){
+    a.backlink{
+        font-size: 0.9em;
+    }
+}
+footer{
+    padding:30px;
+    color:white;
+    background: #151515;
+    width:100%;
+    margin-top: 50px;
+    display: flex;
+}
+.kalimatFooter{
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+}
+
