@@ -598,6 +598,9 @@ h1.judulArtikel{
     padding:10%;
     color: white;
     text-align: center;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 .GambarList::before{
     content:'';
@@ -618,21 +621,21 @@ h1.judulArtikel{
 }
 .Daftar{
     display: flex;
-    
+    min-height: 200px;    
 }
 /*Footer*/
 a.backlink{
     position: relative;
     display: block;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 0;
+    margin-right: 0;
     text-align: center;
     background-color: whitesmoke;
     font-weight: bold;
 }
 @media screen and (max-width:1000px){
     a.backlink{
-        font-size: 0.9em;
+        font-size: 2em;
     }
 }
 footer{
