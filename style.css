@@ -278,7 +278,6 @@ body{
         align-items: center;
         background-color: rgba(0,0,0,0.1);
         margin:0px auto 50px;
-    
     }
 }
 .visi{
@@ -306,7 +305,6 @@ body{
         padding: 50px;
         margin-left: 0%;
         width:100%;
-        border: 2px solid red;
     }
      .visi h2{
     color:black;
@@ -343,7 +341,6 @@ body{
         position: static;
         padding: 50px;
         width:100%;
-        border: 2px solid red;
     }
     .misi h2{
     color:black;
