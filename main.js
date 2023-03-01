@@ -38,3 +38,18 @@ function checkIndex(n) {
     if (n > slides.length) { slideIndex = 1 }
     else if (n < 1) { slideIndex = slides.length }
 }
+
+//dropdown
+const dropdown = document.querySelector(".dropdown");
+const navMenu = document.querySelector(".menu");
+
+dropdown.addEventListener("click", () => {
+    dropdown.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    console.log("dropdown click");
+})
+
+document.querySelectorAll(".nav-link").forEach(n=> n.addEventListener("click",() =>{
+    dropdown.classList.remove("active");
+    navMenu.classList.remove("active");
+}))

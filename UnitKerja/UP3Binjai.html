@@ -6,23 +6,29 @@
     <link rel="stylesheet" href="../style.css" media="screen">
     <link rel="stylesheet" href="../SliderStyle.css">
     <link rel="icon" type="image/png" href="../Assets/PJULogo.png"/>
-    <script src="../main.js"></script>
+    
     <link href="../lightbox.css" rel="stylesheet">
     <script src="../jquery-2.1.3.js"></script>
     <script src="../lightbox.js"></script>
 </head>
 <body>
     <!--Navigation Bar-->
-    <header>
+    <header class="navbar">
         <a href="../index.html" id=logoBox><img src="../Assets/PJULOGO_Text.png" class="logo"> </a>
-        <ul>
-            <li><a href="../index.html#">Halaman Utama</a></li>
-            <li><a href="#" class="selected">Bidang Kerja</a></li>
-            <li><a href="../index.html#PJU_UnitKerja">Unit Kerja</a></li>
-            <li><a href="../index.html#PJU_Kontak">Kontak</a></li>
-            <li><a href="../index.html#PJU_Map">Peta Lokasi</a></li>
-            <li><a href="../index.html#PJU_TentangKami">Tentang Kami</a></li>
+        <ul class="menu">
+            <li class="nav-menu"><a href="../index.html" class="nav-link">Halaman Utama</a></li>
+            <li class="nav-menu"><a href="../BidangKerja.html#PJU_BidangKerja" class="nav-link">Bidang Kerja</a></li>
+            <li class="nav-menu"><a href="../index.html#PJU_UnitKerja" class="nav-link">Unit Kerja</a></li>
+            <li class="nav-menu"><a href="../index.html#PJU_Kontak" class="nav-link">Kontak</a></li>
+            <li class="nav-menu"><a href="../index.html#PJU_Peta" class="nav-link">Peta Lokasi</a></li>
+            <li class="nav-menu"><a href="../index.html#PJU_TentangKami" class="nav-link">Tentang Kami</a></li>
         </ul>
+        <button class="dropdown">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </header>
     <a class="anchor" id="PJU_BidangKerja"></a>
      <!--Content4 digunakan untuk artikel-->
@@ -50,5 +56,6 @@
     </div>
 
 </body>
+<script src="../main.js"></script>
 <footer><div class="kalimatFooter">©2021 Pribumi Jaya Utama<br>All Right Reserved.</div></footer>
 </html>

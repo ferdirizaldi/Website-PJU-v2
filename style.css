@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 html{
     scroll-behavior: smooth;
 }
@@ -46,7 +47,6 @@ header{
 header ul{
     position: relative;
     display: flex;
-    
 }
 
 header ul li{
@@ -64,7 +64,6 @@ header ul li a{
     padding: 3px;
 }
 header ul li a:hover{
-    
     background-color: rgb(0,0,0,0.5);
     color: white;
 }
@@ -72,11 +71,80 @@ header ul li a:hover{
     font-weight: bold;
     border-bottom: 4px solid white;
 }
+.dropdown{
+    display: none;
+}
+
 @media screen and (max-width:1000px){
     header ul li a{
         font-weight:bold;
     }
+    /*dropdown button*/
+    .dropdown{
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        user-select: none;
+
+        appearance: none;
+        border: none;
+        outline: none;
+        background:none;
+        cursor: pointer;
+    }
+    .dropdown span{
+        display: block;
+        width: 70px;
+        height: 10px;
+        margin-bottom: 10px;
+        position: relative;
+
+        background-color: white;
+        border-radius: 6px;
+        z-index: 1;
+
+        transform-origin: 0 0;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+    .dropdown:active span:nth-child(2){
+        transform:  translateX(10px);
+        background-color: blue;
+    }
+    .dropdown:active span:nth-child(4){
+        transform:  translateX(20px);
+        background-color: blue;
+    }
+    .dropdown.active{
+        background:none;
+    }
+    /*Content Navbar Mobile*/
+    .menu{
+        position:fixed;
+        left: -100%;
+        top:160px;
+        gap: 0;
+        flex-direction:column;
+        background-color: rgb(220,17,17);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 100;
+    }
+    .nav-menu{
+        margin: 10px 0;
+    }
+    .menu.active{
+        left: 0;
+        background-color: #333;
+    }
+    .nav-link{
+        font-size: 2em;
+    }
 }
+
+
 /*keyframes*/
 @keyframes slidein{
     0%{opacity: 0%;}
@@ -104,7 +172,11 @@ header .logo{
 }
 @media screen and (max-width:1000px){
     #logoBox{
-        margin-left: 0px;
+        margin-left: 0px; 
+        padding: 20px 10px;
+    }
+    header .logo{
+        max-width: 700px;
     }
 }
 /*Body*/
@@ -113,10 +185,9 @@ body{
     z-index: 1;
     padding-top: 7%;
 }
-
 @media screen and (max-width:1000px){
     body{
-        padding-top: 12%;
+        padding-top: 20%;
     }
 }
 /*Tentang Kami*/
