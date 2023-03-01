@@ -163,20 +163,30 @@ body{
     font-size: 1.5em;
 }
 @media screen and (max-width:1000px){
-    .tentangKami h2{
-    text-align: center;
-    position: relative;
-    color:black;
-    font-size: 4em;
-    line-height: 3em;
-    font-weight: 500;
-}
-    .tentangKami p{
-    text-align: center;
-    position: relative;
-    color: #333;
-    font-size: 3em;
-}   
+    .tentangKami{
+        position: relative;
+        padding: 10px;
+        margin:0px auto 0px;
+        width:100%;
+        background-color: rgba(255,255,255,0.7);
+    }
+        .tentangKami h2{
+        text-align: center;
+        position: relative;
+        color:black;
+        font-size: 4em;
+        line-height: 2em;
+        font-weight: 500;
+        padding-top: 5px;
+    }
+        .tentangKami p{
+        text-align:left;
+        position: relative;
+        color: #333;
+        font-size: 3em;
+        padding: 20px;
+        padding-top: 0px;
+    }   
 }
 /*Unit Aktif*/
 #content6{
@@ -240,6 +250,12 @@ body{
     50%  {background-color: rgba(0,0,0,0.7)}
     100% {background-color: rgba(220,17,17,0.9)}
 }
+
+@media screen and (max-width:1000px){
+    #content6{
+        transform: scale(1.5);
+    }
+}
 /*Visi Misi*/ 
 #content1{
     position: relative;
@@ -251,6 +267,19 @@ body{
     background-color: rgba(0,0,0,0.1);
     margin:0px auto 50px;
 
+}
+@media screen and (max-width:1000px){
+    #content1{
+        position: static;
+        width: 100%;
+        max-height: 1800px;
+        display:block;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(0,0,0,0.1);
+        margin:0px auto 50px;
+    
+    }
 }
 .visi{
     padding: 10px;
@@ -272,8 +301,12 @@ body{
 }
 @media screen and (max-width:1000px){
     .visi{
+        position: static;
         background-color:rgb(0,0,0,0.5);
-        padding:5%;
+        padding: 50px;
+        margin-left: 0%;
+        width:100%;
+        border: 2px solid red;
     }
      .visi h2{
     color:black;
@@ -282,7 +315,6 @@ body{
     font-weight: 500;
     color:white;
 }
-
     .visi p {
     color: #333;
     font-size: 2em;
@@ -307,12 +339,21 @@ body{
     font-size: 1.06em;
 }
 @media screen and (max-width:1000px){
+    .misi{
+        position: static;
+        padding: 50px;
+        width:100%;
+        border: 2px solid red;
+    }
     .misi h2{
     color:black;
     font-size: 6em;
     line-height: 1.4em;
     font-weight: 500;
 }
+    .misi ol{
+        padding: 20px;
+    }
     .misi ol li{
     color: #333;
     font-size: 1.6em;
